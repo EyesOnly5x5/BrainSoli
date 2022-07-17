@@ -1,26 +1,10 @@
 <resources>
-    <string name="app_name">BrainSource</string>
-    <string name="title1">Brain-Source</string>
-    <string name="title6">SuppaHirn</string>
-    <string name="title7">SupraHirni</string>
-    <string name="title8">NonoGram</string>
-    <string name="title8o">NG</string>
-    <string name="title8a">5x5</string>
-    <string name="title8b">6x6</string>
-    <string name="title8c">&#160;&#160;&#160;7x7&#160;&#160;&#160;</string>
-    <string name="title8d">8x8</string>
-    <string name="title8e">9x9</string>
-    <string name="title8f">&#160;10x10&#160;</string>
+    <string name="app_name">BrainSoli</string>
+    <string name="title1">Brain-Soli</string>
     <string name="title9">Das ist es</string>
-    <string name="title10">&#160;&#160;&#160;Sudo&#160;&#160;Kuh&#160;&#160;&#160;</string>
-    <string name="title10o">SK</string>
-    <string name="title10a">3*3</string>
-    <string name="title10b">9*9</string>
     <string name="titleNone"></string>
     <string name="title11">Solitär - Halma</string>
     <string name="title11o">SH</string>
-    <string name="title12">Memory</string>
-    <string name="title13">Pos-I-Tron</string>
     <string name="b0">0</string>
     <string name="b1">1</string>
     <string name="b2">2</string>
@@ -57,28 +41,12 @@
     <string name="Punkte">Punkte:</string>
     <string name="Loesung"></string>
     <string name="neuSt">Neu Start</string>
-    <string name="AnleitSuppa">
-        SuppaHirn, SupraHirni\n\nEs gilt die farben herauszufinden.\n
-        Einfaches MasterMind sprich Superhirn.
-    </string>
-    <string name="AnleitNonoG">
-        Nonogram\n\nEs gilt das muster herauszufinden.\n
-        Die zahlen am rand geben an, wieviele punkte ohne leerraum gesetzt sind.\n\n
-        bsp.: 1-1-1 = RgRgR / 2-2 = RRgRR\n1-1 = RgRgg oder gRgRg oder ggRgR
-    </string>
-    <string name="AnleitSudoK">
-        SudoKuh\n\nIst wohl keine anleitung nötig.\nEinfach nur Sudoku.\nZahlen von 1 bis 9 so verteile
-        n das keine 2 identische ziffern horizontal, vertikal oder in einem 9ner block sind.
-    </string>
     <string name="AnleitSoli">
-        Solitär-Halma\n\nübersprungene stecker werden vom spielfeld entfernt, bis am ende kein weiterer sprung mehr möglich ist. gewonnen hat man, wenn nur noch 1 stecker auf dem spielfeld verbleibt.
+        Solitär-Halma\n\nübersprungene stecker werden vom spielfeld entfernt, bis am ende kein weiterer sprung mehr möglich ist. gewonnen hat man, wenn nur noch 1 stecker auf dem spielfeld verbleibt.%1$s
     </string>
-    <string name="AnleitMemo">
-        Memory\n\nFinde 2 gleiche und die Niete.\n\nNiete zum ersten mal gefunden +2 Punkte, jedes weitere mal 1 Punkt abzug.\n
-        Jedesmal wenn nach einem Treffer ein erneuter Treffer folgt gibt es einen Punkt mehr. Kein Treffer gibt 1 Punkt abzug.
-    </string>
-    <string name="AnleitPIT">
-        Pos-I-Tron\n\nOrdne alles so an das weder Horizontal noch vertikal, form und farbe doppelt vorkommt.
+    <string name="Wunschliste">\n-----\n
+        Meine Amazon Wunschliste: https://ogy.de/hiaq\n
+        Wer möchte und kann, darf mir gerne etwas von meiner Wunschliste zukommen lassen, oder auch nicht.
     </string>
 
 </resources>
