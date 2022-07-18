@@ -20,21 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="abfb1ea1-b31d-4b67-ba76-4df93fcb9f09" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/deploymentTargetDropDown.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deploymentTargetDropDown.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/de/eyesonly5x5/brainstorm/Globals.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/de/eyesonly5x5/brainstorm/Globals.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/de/eyesonly5x5/brainstorm/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/de/eyesonly5x5/brainstorm/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/de/eyesonly5x5/brainstorm/MemoryActivity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/de/eyesonly5x5/brainstorm/NonoGramActivity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/de/eyesonly5x5/brainstorm/PITActivity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/de/eyesonly5x5/brainstorm/SudokuActivity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/de/eyesonly5x5/brainstorm/SupaHirnActivity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_memory.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_nonogram.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_pit.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_sudoku.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_supahirn.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/de/eyesonly5x5/brainstorm/SolitarActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/de/eyesonly5x5/brainstorm/SolitarActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_solitar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_solitar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/dimens.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/dimens.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -221,13 +211,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1629726477167</updated>
-    </task>
-    <task id="LOCAL-00048" summary="Sudo-Kuh erstellen STuffe 4, mit contextMenu test">
-      <created>1633446194821</created>
-      <option name="number" value="00048" />
-      <option name="presentableId" value="LOCAL-00048" />
-      <option name="project" value="LOCAL" />
-      <updated>1633446194821</updated>
     </task>
     <task id="LOCAL-00049" summary="Sudo-Kuh erstellen STuffe 4, mit DialogFeld 0-9">
       <created>1633620319485</created>
@@ -565,12 +548,18 @@
       <option name="project" value="LOCAL" />
       <updated>1657527012664</updated>
     </task>
-    <option name="localTasksCounter" value="97" />
+    <task id="LOCAL-00097" summary="BrainSoli ausgelagert">
+      <created>1658065122717</created>
+      <option name="number" value="00097" />
+      <option name="presentableId" value="LOCAL-00097" />
+      <option name="project" value="LOCAL" />
+      <updated>1658065122717</updated>
+    </task>
+    <option name="localTasksCounter" value="98" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Start Memory 3." />
     <MESSAGE value="Start Memory 4." />
     <MESSAGE value="Start Memory 5." />
     <MESSAGE value="Start Memory 6." />
@@ -595,6 +584,7 @@
     <MESSAGE value="Memory Überarbeitet. Hoffentlich Fertig." />
     <MESSAGE value="BrainSource Init" />
     <MESSAGE value="BrainSource Überarbeitet" />
-    <option name="LAST_COMMIT_MESSAGE" value="BrainSource Überarbeitet" />
+    <MESSAGE value="BrainSoli ausgelagert" />
+    <option name="LAST_COMMIT_MESSAGE" value="BrainSoli ausgelagert" />
   </component>
 </project>

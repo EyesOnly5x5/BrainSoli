@@ -15,12 +15,15 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.util.Random;
+
 public class SolitarActivity extends AppCompatActivity {
     Globals daten = Globals.getInstance();
     int[] BUTTON_IDS;
     int[] TEXT_IDS;
     // int[] scrSize;
     boolean hilfe = false;
+    private int loesung;
 
     @SuppressLint({"SetTextI18n", "ResourceType"})
     @Override
@@ -35,7 +38,9 @@ public class SolitarActivity extends AppCompatActivity {
         Button DasIstEs = findViewById( R.id.DasIstEs );
         DasIstEs.setTextSize( daten.getMetrics().pxToDp((int)(DasIstEs.getTextSize()*daten.getMetrics().getFaktor())) );
         DasIstEs.setOnClickListener(view -> {
+            daten.deleSolitar();
             SolitarNeuStart();
+            hilfe = false;
         });
         if( true ){
             SolitarNeuStart();
@@ -107,7 +112,7 @@ public class SolitarActivity extends AppCompatActivity {
                             daten.DasIstEsSoli();
                             if( !daten.getGewonnen() ) {
                                 TextView vw = findViewById(R.id.Losung);
-                                vw.setText( (hilfe) ? ""+loesung( 1 )[daten.getZuege()]:"" );
+                                vw.setText( (hilfe) ? ""+loesung( loesung )[daten.getZuege()]:"" );
                             }
                         }
                         if( daten.getGewonnen() ){
@@ -127,31 +132,32 @@ public class SolitarActivity extends AppCompatActivity {
 
     private String[] loesung( int los ){
         String[] aLos;
-        if( los == 1 ){
+        if( los == 0 ){
             /* 1.Lösung: */
-            aLos = new String[]{ "15-17", "28-16", "21-23", "07-21", "16-28", "31-23", "24-22",
-                    "21-23", "26-24", "23-25", "32-24", "24-26", "33-25", "26-24", "12-26", "27-25",
+            aLos = new String[]{
+                    "15-17", "28-16", "21-23", "07-21", "16-28", "31-23", "24-22", "21-23",
+                    "26-24", "23-25", "32-24", "24-26", "33-25", "26-24", "12-26", "27-25",
                     "13-27", "24-26", "27-25", "10-12", "25-11", "12-10", "03-11", "10-12",
                     "08-10", "01-09", "09-11", "02-10", "17-05", "12-10", "05-17" };
-        } else if( los == 2 ){
+        } else if( los == 1 ){
             /* 2.Lösung:
             Der "Weltrekord" ist eine Lösung mit nur 18 Zügen von E. Bergholt aus dem Jahre 1912.
             */
             aLos = new String[]{
-                    "15-17", "28-16", "21-23", "24-22", "26-24", "33-25", "18-30",
-                    "31-33-25", "09-23", "01-09", "06-18-30-28-16-04",
-                    "07-21-23-25", "13-11", "10-12",
-                    "27-13-11", "03-01-09", "08-10-12-26-24-10", "05-17" };
-        } else if( los == 3 ){
+                    "15-17", "28-16", "21-23", "24-22", "26-24", "33-25", "18-30", "31-33",
+                    "33-25", "09-23", "01-09", "06-18", "18-30", "30-28", "28-16", "16-04",
+                    "07-21", "21-23", "23-25", "13-11", "10-12", "27-13", "13-11", "03-01",
+                    "01-09", "08-10", "10-12", "12-26", "26-24", "24-10", "05-17" };
+        } else if( los == 2 ){
             /* 3.Lösung:
             Die folgende Lösungsweg ist elegant. Man wendet viermal den L-Zug an und gelangt dann zur Hausfigur
             (das Haus steht auf dem Kopf), die man mit einem Sechsfachsprung abbaut.
             */
             aLos = new String[]{
-                    "05-17", "08-10", "01-09", "03-01", "16-04", "01-09", "28-16",
-                    "21-23", "07-21", "24-22", "21-23", "26-24", "33-25", "31-33",
-                    "18-30", "33-25", "06-18", "13-11", "27-13", "10-12", "13-11",
-                    "24-26-12-10-08-22-24", "17-15", "29-17", "18-16", "15-17" };
+                    "05-17", "08-10", "01-09", "03-01", "16-04", "01-09", "28-16", "21-23",
+                    "07-21", "24-22", "21-23", "26-24", "33-25", "31-33", "18-30", "33-25",
+                    "06-18", "13-11", "27-13", "10-12", "13-11", "24-26", "26-12", "12-10",
+                    "10-08", "08-22", "22-24", "17-15", "29-17", "18-16", "15-17" };
         } else {
             aLos = new String[]{};
         }
@@ -184,7 +190,7 @@ public class SolitarActivity extends AppCompatActivity {
                     oView.setText(R.string.title11);
                     oView.setTypeface(Typeface.DEFAULT_BOLD);
                     oView.setTextColor(oView.getContext().getResources().getColor(R.color.Richtig1));
-                    oView.setTextSize((getResources().getDimension(R.dimen.NonoLogo) * 1.5f));
+                    oView.setTextSize(( getResources().getDimension(R.dimen.NonoLogo) ) * 1.5f);
                     oView.setGravity(Gravity.CENTER);
                     oView.setId(TEXT_IDS[c]);
                     Button finalOView = oView;
@@ -192,7 +198,7 @@ public class SolitarActivity extends AppCompatActivity {
                         hilfe = daten.getZuege() == 0;
                         finalOView.setTextColor(finalOView.getContext().getResources().getColor((!hilfe) ? R.color.Richtig1 : R.color.color2));
                         TextView vw = findViewById(R.id.Losung);
-                        vw.setText((hilfe) ? "" + loesung(1)[daten.getZuege()] : "");
+                        vw.setText((hilfe) ? "" + loesung(loesung)[daten.getZuege()] : "");
                     });
                     param.height = (int) getResources().getDimension(R.dimen.NonoNG);
                 } else {
@@ -200,8 +206,8 @@ public class SolitarActivity extends AppCompatActivity {
                 }
                 param.width = GridLayout.LayoutParams.MATCH_PARENT;
                 param.setGravity(Gravity.CENTER);
-                param.topMargin = 25;
-                param.bottomMargin = 25;
+                param.topMargin = 2;
+                param.bottomMargin = 2;
             } else {
                 GridLayout gL1 = new GridLayout( this );
                 int column1 = 3;
@@ -241,7 +247,7 @@ public class SolitarActivity extends AppCompatActivity {
                         }
                         GridLayout.LayoutParams param2 = new GridLayout.LayoutParams();
                         // param2.topMargin = 15;
-                        param2.setMargins(5, 5, 5, 5);
+                        param2.setMargins(2, 2, 2, 2);
                         param2.setGravity(Gravity.CENTER);
                         param2.columnSpec = GridLayout.spec(c2);
                         param2.rowSpec = GridLayout.spec(r2);
@@ -251,7 +257,7 @@ public class SolitarActivity extends AppCompatActivity {
                         oView.setTag(BUTTON_IDS[(quad[r2][c2])]);
                         // oView.setText( ""+BUTTON_IDS[(quad[r2][c2])] );
                         oView.setTextColor(oView.getContext().getResources().getColor(R.color.white));
-                        oView.setTextSize((getResources().getDimension(R.dimen.NonoLogo) ));
+                        oView.setTextSize( (getResources().getDimension(R.dimen.NonoLogo) ));
                         oView.setTypeface(Typeface.DEFAULT_BOLD);
                         oView.setBackgroundResource(R.drawable.sh_btn_1);
                         if (BUTTON_IDS[(quad[r2][c2])] == 25)
@@ -274,7 +280,7 @@ public class SolitarActivity extends AppCompatActivity {
             oView.setGravity(Gravity.CENTER);
             if (i != 0) oView.setPadding(0, 0, 0, 0);
 
-            param.rightMargin = 15;
+            param.rightMargin = 5;
             gridLayout.addView(oView, param);
             if (i == 0 || r == 0 || c == 0) daten.addText(oView);
             else daten.addButton(oView);
@@ -282,10 +288,12 @@ public class SolitarActivity extends AppCompatActivity {
         daten.sortButtons();
         daten.setGewonnen( false );
         TextView vw = findViewById( R.id.Losung );
-        vw.setText( ""+ loesung( 1 )[daten.getZuege()] );
+        vw.setText( ""+ loesung( loesung )[daten.getZuege()] );
     }
 
     private void SolitarNeuStart(){
+        Random r = new Random();
+        loesung = r.nextInt(3);
         daten.SolitarInit();
         setzeButtonClick();
         daten.loadSolitar();
@@ -304,7 +312,7 @@ public class SolitarActivity extends AppCompatActivity {
         Button but = findViewById( TEXT_IDS[0] );
         but.setTextColor( but.getContext().getResources().getColor( R.color.Richtig1 ) );
         TextView vw = findViewById( R.id.Losung );
-        vw.setText( (hilfe) ? ""+loesung( 1 )[daten.getZuege()]:"" );
+        vw.setText( (hilfe) ? ""+loesung( loesung )[daten.getZuege()]:"" );
     }
 
     private int[][] geneQuad( int x, int y ){
