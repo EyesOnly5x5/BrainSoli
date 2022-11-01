@@ -226,20 +226,6 @@
       <option name="presentableId" value="Default" />
       <updated>1629726477167</updated>
     </task>
-    <task id="LOCAL-00053" summary="Sudo-Kuh Fertig, incl. Save-Load">
-      <created>1634044797897</created>
-      <option name="number" value="00053" />
-      <option name="presentableId" value="LOCAL-00053" />
-      <option name="project" value="LOCAL" />
-      <updated>1634044797897</updated>
-    </task>
-    <task id="LOCAL-00054" summary="Sudo-Kuh Fertig, incl. Save-Load">
-      <created>1634044949214</created>
-      <option name="number" value="00054" />
-      <option name="presentableId" value="LOCAL-00054" />
-      <option name="project" value="LOCAL" />
-      <updated>1634044949214</updated>
-    </task>
     <task id="LOCAL-00055" summary="Sudo-Kuh Fertig, incl. Save-Load">
       <created>1634048395372</created>
       <option name="number" value="00055" />
@@ -569,7 +555,21 @@
       <option name="project" value="LOCAL" />
       <updated>1667290290111</updated>
     </task>
-    <option name="localTasksCounter" value="102" />
+    <task id="LOCAL-00102" summary="readme.md hinzugefügt.">
+      <created>1667292849379</created>
+      <option name="number" value="00102" />
+      <option name="presentableId" value="LOCAL-00102" />
+      <option name="project" value="LOCAL" />
+      <updated>1667292849379</updated>
+    </task>
+    <task id="LOCAL-00103" summary="readme.md hinzugefügt.">
+      <created>1667292866465</created>
+      <option name="number" value="00103" />
+      <option name="presentableId" value="LOCAL-00103" />
+      <option name="project" value="LOCAL" />
+      <updated>1667292866465</updated>
+    </task>
+    <option name="localTasksCounter" value="104" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
